@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dream Journal Privacy & Support</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lato:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+  /* Layout: one calm reading column, the app's pink pill title on top, EN / FR switch, short sections. */
+  :root {
+    --bg: #FBF5E6;          /* the app's cream */
+    --surface: #FFFFFF;
+    --ink: #4A4A4A;
+    --muted: #7A6F72;
+    --pink: #FFC7D9;        /* baby pink */
+    --rose: #A8436A;        /* readable rose */
+    --line: #EAD9DE;
+    --font-display: "Dancing Script", "Snell Roundhand", cursive;
+    --font-body: "Lato", "Helvetica Neue", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #000000; --surface: #1A1A1A; --ink: #F3EEF0; --muted: #B0A6AA;
+      --pink: #4A2E38; --rose: #FFB3CC; --line: #33262B; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #000000; --surface: #1A1A1A; --ink: #F3EEF0; --muted: #B0A6AA;
+    --pink: #4A2E38; --rose: #FFB3CC; --line: #33262B; color-scheme: dark;
+  }
+
+  body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; }
+  .wrap { max-width: 640px; margin: 0 auto; padding-inline: 20px; padding-block: 32px 56px; display: flex; flex-direction: column; gap: 28px; }
+
+  header { display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
+  .pill { background: var(--pink); color: var(--rose); font-family: var(--font-display); font-size: 34px; line-height: 1.1; padding: 10px 26px; border-radius: 10px; letter-spacing: 1px; }
+  .tagline { color: var(--muted); font-style: italic; margin: 0; }
+
+  .langs { display: inline-flex; gap: 4px; padding: 3px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); }
+  .langs button { font: 700 13px/1 var(--font-body); color: var(--muted); background: none; border: 0; padding: 8px 16px; border-radius: 999px; cursor: pointer; }
+  .langs button[aria-pressed="true"] { background: var(--rose); color: var(--bg); }
+  .langs button:focus-visible, .copy:focus-visible { outline: 2px solid var(--rose); outline-offset: 2px; }
+
+  .summary { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; }
+  .summary p { margin: 0; }
+  .summary strong { color: var(--rose); }
+
+  section { display: flex; flex-direction: column; gap: 6px; }
+  h2 { font-family: var(--font-display); font-weight: 600; font-size: 28px; color: var(--rose); margin: 0; text-wrap: balance; }
+  h3 { font-size: 15px; margin: 10px 0 0; }
+  p, li { margin: 0; max-width: 65ch; }
+  ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 4px; }
+
+  .contact { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+  .email { font-weight: 700; user-select: all; word-break: break-all; }
+  .copy { font: 700 13px/1 var(--font-body); color: var(--rose); background: transparent; border: 1px solid var(--rose); border-radius: 999px; padding: 7px 14px; cursor: pointer; }
+
+  .meta { color: var(--muted); font-size: 13px; text-align: center; }
+  [lang="fr"][hidden], [lang="en"][hidden] { display: none !important; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="pill">Dream Journal</div>
+    <p class="tagline" data-en="Privacy policy &amp; support" data-fr="Politique de confidentialité &amp; assistance">Privacy policy &amp; support</p>
+    <div class="langs" role="group" aria-label="Language">
+      <button type="button" id="btn-en" aria-pressed="true">English</button>
+      <button type="button" id="btn-fr" aria-pressed="false">Français</button>
+    </div>
+  </header>
+
+  <!-- ENGLISH -->
+  <main lang="en" id="en" class="wrap" style="padding:0">
+    <div class="summary"><p><strong>In short:</strong> everything you write in Dream Journal stays on your iPhone. We don’t collect, store or share any of your data, and the app has no accounts, ads or tracking.</p></div>
+
+    <section>
+      <h2>What the app stores</h2>
+      <p>Your journal entries, moods, Flip It lists, Dreams &amp; Visions, Happy List and settings (language, theme, reminder times) are saved only in the app’s storage on your device.</p>
+      <p>They are never sent to us or to anyone else. We have no server and cannot see, read or recover your entries.</p>
+    </section>
+
+    <section>
+      <h2>What we collect</h2>
+      <ul>
+        <li>No personal information, no account, no email.</li>
+        <li>No analytics, no advertising, no tracking across apps or websites.</li>
+        <li>No third-party services receive your data.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Notifications</h2>
+      <p>If you turn on Nudges, reminders are scheduled locally by your iPhone. No data leaves your device. You can turn them off in the app or in iPhone Settings › Dream Journal › Notifications.</p>
+    </section>
+
+    <section>
+      <h2>Deleting your data</h2>
+      <p>You can delete any entry or item inside the app. Deleting the app from your iPhone removes all of its data permanently. Because nothing is stored elsewhere, deleted data cannot be recovered.</p>
+    </section>
+
+    <section>
+      <h2>Children</h2>
+      <p>Dream Journal does not knowingly collect information from anyone, including children.</p>
+    </section>
+
+    <section>
+      <h2>Changes</h2>
+      <p>If this policy changes, the new version will be posted on this page with an updated date.</p>
+    </section>
+
+    <section>
+      <h2>Support</h2>
+      <h3>Notifications don’t arrive</h3>
+      <p>Check iPhone Settings › Dream Journal › Notifications and make sure they are allowed, and that Focus or Do Not Disturb is off.</p>
+      <h3>I changed phone</h3>
+      <p>Entries are stored only on the device where you wrote them, so they don’t move to a new phone automatically.</p>
+      <h3>Questions, ideas or problems</h3>
+      <p>Write to us, we usually answer within a few days:</p>
+      <div class="contact">
+        <span class="email">zitouni.maram20@gmail.com</span>
+        <button class="copy" type="button" data-label-en="Copy" data-label-fr="Copier">Copy</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- FRANÇAIS -->
+  <main lang="fr" id="fr" class="wrap" style="padding:0" hidden>
+    <div class="summary"><p><strong>En bref :</strong> tout ce que tu écris dans Dream Journal reste sur ton iPhone. Nous ne collectons, ne stockons et ne partageons aucune donnée, et l’app n’a ni compte, ni publicité, ni suivi.</p></div>
+
+    <section>
+      <h2>Ce que l’app enregistre</h2>
+      <p>Tes pages de journal, humeurs, listes Flip It, Rêves &amp; Visions, Liste de Bonheur et réglages (langue, thème, heures de rappel) sont enregistrés uniquement dans le stockage de l’app sur ton appareil.</p>
+      <p>Ils ne nous sont jamais envoyés, ni à personne d’autre. Nous n’avons pas de serveur et ne pouvons ni voir, ni lire, ni récupérer tes écrits.</p>
+    </section>
+
+    <section>
+      <h2>Ce que nous collectons</h2>
+      <ul>
+        <li>Aucune information personnelle, aucun compte, aucun e-mail.</li>
+        <li>Aucune mesure d’audience, aucune publicité, aucun suivi entre apps ou sites.</li>
+        <li>Aucun service tiers ne reçoit tes données.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Notifications</h2>
+      <p>Si tu actives les Petits rappels, ils sont programmés localement par ton iPhone. Aucune donnée ne quitte ton appareil. Tu peux les désactiver dans l’app ou dans Réglages › Dream Journal › Notifications.</p>
+    </section>
+
+    <section>
+      <h2>Supprimer tes données</h2>
+      <p>Tu peux supprimer n’importe quelle page ou élément dans l’app. Supprimer l’app de ton iPhone efface définitivement toutes ses données. Comme rien n’est stocké ailleurs, elles ne peuvent pas être récupérées.</p>
+    </section>
+
+    <section>
+      <h2>Enfants</h2>
+      <p>Dream Journal ne collecte sciemment aucune information, y compris auprès d’enfants.</p>
+    </section>
+
+    <section>
+      <h2>Modifications</h2>
+      <p>Si cette politique change, la nouvelle version sera publiée sur cette page avec une date mise à jour.</p>
+    </section>
+
+    <section>
+      <h2>Assistance</h2>
+      <h3>Les notifications n’arrivent pas</h3>
+      <p>Vérifie Réglages › Dream Journal › Notifications, qu’elles sont autorisées, et que le mode Concentration ou Ne pas déranger est désactivé.</p>
+      <h3>J’ai changé de téléphone</h3>
+      <p>Tes écrits sont stockés uniquement sur l’appareil où tu les as écrits, ils ne passent donc pas automatiquement sur un nouveau téléphone.</p>
+      <h3>Questions, idées ou problèmes</h3>
+      <p>Écris-nous, nous répondons généralement en quelques jours :</p>
+      <div class="contact">
+        <span class="email">zitouni.maram20@gmail.com</span>
+        <button class="copy" type="button">Copier</button>
+      </div>
+    </section>
+  </main>
+
+  <p class="meta"><span data-en="Last updated: 13 October 2026" data-fr="Dernière mise à jour : 13 octobre 2026">Last updated: 13 October 2026</span></p>
+</div>
+
+<script>
+  (function () {
+    const en = document.getElementById('en'), fr = document.getElementById('fr');
+    const bEn = document.getElementById('btn-en'), bFr = document.getElementById('btn-fr');
+    function setLang(l) {
+      en.hidden = l !== 'en'; fr.hidden = l !== 'fr';
+      bEn.setAttribute('aria-pressed', l === 'en'); bFr.setAttribute('aria-pressed', l === 'fr');
+      document.documentElement.lang = l;
+      document.querySelectorAll('[data-en]').forEach(el => { el.innerHTML = el.dataset[l]; });
+    }
+    bEn.addEventListener('click', () => setLang('en'));
+    bFr.addEventListener('click', () => setLang('fr'));
+    if (location.hash === '#fr') setLang('fr');
+
+    document.querySelectorAll('.copy').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const email = btn.parentElement.querySelector('.email');
+        const done = () => { const t = btn.textContent; btn.textContent = '✓'; setTimeout(() => btn.textContent = t, 1500); };
+        try {
+          navigator.clipboard.writeText(email.textContent.trim()).then(done, () => selectText(email));
+        } catch (e) { selectText(email); }
+      });
+    });
+    function selectText(el) {
+      const r = document.createRange(); r.selectNodeContents(el);
+      const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+    }
+  })();
+</script>
+</body>
+</html>
